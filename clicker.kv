@@ -156,6 +156,15 @@
             size_hint_y: 0.76
             id: game_window
 
+            Label:
+                id: level_title
+                text: 'Level 1'
+                font_size: '60sp'
+                size_hint_y: None
+                height: self.texture_size[1]
+                x: root.width / 2 - self.width / 2
+                y: '130dp'
+
             Fish:
                 id: fish
                 center: root.center
@@ -174,19 +183,11 @@
         # Нижнє меню
         BoxLayout:
             size_hint_y: 0.12
-            
+
             # Кнопка-іконка "Налаштування"
-            ButtonMenu: 
-                font_name: 'assets/typicons.ttf'
-                text: '\uE04F' 
-                size_hint_x: None
-                font_size: '38sp'
+            ButtonIcon:
+                text: '\uE04F'
                 pos_hint: {'y': 0}
 
-        # Icon
-        # Label:
-        #     font_name: 'assets/typicons.ttf'
-        #     text: '\uE08A' 
-        #     font_size: '56sp'
 
         
